@@ -1,8 +1,0 @@
-cd ~/klipper_config/
-git init
-git remote add origin https://github.com/chopdi/Klipper
-git add .
-git commit -m "Klipper V24"
-git push -u origin master
-
-Hi
