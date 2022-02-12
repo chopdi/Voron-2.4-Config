@@ -66,7 +66,7 @@ push_config(){
   git add . -v
   current_date=$(date +"%Y-%m-%d %T")
   git commit -m "Backup triggered on $current_date" -m "$m1" -m "$m2" -m "$m3" -m "$m4"
-  git push "https://pi:$GH_TOKEN@github.com/chopdi/Voron-2.4-Config"
+  git push "https://:$GH_TOKEN@github.com/chopdi/Voron-2.4-Config"
   #git push "https://github.com/chopdi/Voron-2.4-Config.git"
  
 }
