@@ -89,7 +89,7 @@ VERSION=`git describe --abbrev=0 --tags`
 #echo "Updating $VERSION to $NEW_TAG"
 
 #get current hash and see if it already has a tag
-GIT_COMMIT=`git rev-parse HEAD`
+GIT_COMMIT=`git rev-parse HEAD:master`
 NEEDS_TAG=`git describe --contains $GIT_COMMIT 2>/dev/null`
 
 #only tag if no tag already
