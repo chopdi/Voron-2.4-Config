@@ -84,9 +84,9 @@ VERSION=`git describe --abbrev=0 --tags`
 #VNUM3=$((VNUM3+1))
 
 #create new tag
-NEW_TAG="$VNUM1.$VNUM2.$VNUM3"
+#NEW_TAG="$VNUM1.$VNUM2.$VNUM3"
 
-echo "Updating $VERSION to $NEW_TAG"
+#echo "Updating $VERSION to $NEW_TAG"
 
 #get current hash and see if it already has a tag
 GIT_COMMIT=`git rev-parse HEAD`
