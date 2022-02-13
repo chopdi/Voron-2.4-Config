@@ -75,7 +75,7 @@ push_config
 VERSION=`git describe --abbrev=0 --tags`
 
 #replace . with space so can split into an array
-VERSION_BITS=(${VERSION//./ })
+#VERSION_BITS=(${VERSION//./ })
 
 #get number parts and increase last one by 1
 VNUM1=${VERSION_BITS[0]}
