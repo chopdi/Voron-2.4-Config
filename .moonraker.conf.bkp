@@ -1,55 +1,52 @@
-#####################################################################
-#          Moonraker Config
-#####################################################################
-
 [server]
-host: 0.0.0.0
-port: 7125
-enable_debug_logging: False
-config_path: ~/klipper_config
+host = 0.0.0.0
+port = 7125
+enable_debug_logging = False
 
 [authorization]
-#enabled: False
-cors_domains:
-    https://my.mainsail.xyz
-    http://my.mainsail.xyz
-    http://*.local
-    http://*.lan
-trusted_clients:
-    10.0.0.0/8
-    127.0.0.0/8
-    169.254.0.0/16
-    172.16.0.0/12
-    192.168.0.0/16
-    FE80::/10
-    ::1/128
+cors_domains = 
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	http://*.local
+	http://*.lan
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
 
-# enables partial support of Octoprint API
+[file_manager]
+config_path = ~/klipper_config
+log_path = ~/klipper_config
+queue_gcode_uploads = False
+enable_object_processing = False
+
 [octoprint_compat]
 
-# enables moonraker to track and store print history.
 [history]
 
-# this enables moonraker's update manager
 [update_manager]
 
 [update_manager mainsail]
-type: web_beta
-repo: mainsail-crew/mainsail
-path: ~/mainsail
+type = web
+channel = beta
+repo = mainsail-crew/mainsail
+path = ~/mainsail
 
 [update_manager led_effect]
-type: git_repo
-path: ~/klipper-led_effect
-origin: https://github.com/julianschill/klipper-led_effect.git
-is_system_service: False
+type = git_repo
+path = ~/klipper-led_effect
+origin = https://github.com/julianschill/klipper-led_effect.git
+is_system_service = False
 
 [update_manager KlipperScreen]
-type: git_repo
-path: ~/KlipperScreen
-origin: https://github.com/jordanruthe/KlipperScreen.git
-env: ~/.KlipperScreen-env/bin/python
-requirements: scripts/KlipperScreen-requirements.txt
-install_script: scripts/KlipperScreen-install.sh
-
+type = git_repo
+path = ~/KlipperScreen
+origin = https://github.com/jordanruthe/KlipperScreen.git
+env = ~/.KlipperScreen-env/bin/python
+requirements = scripts/KlipperScreen-requirements.txt
+install_script = scripts/KlipperScreen-install.sh
 
