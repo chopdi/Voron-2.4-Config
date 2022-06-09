@@ -22,7 +22,7 @@ trusted_clients =
 config_path = ~/klipper_config
 log_path = ~/klipper_config
 queue_gcode_uploads = False
-enable_object_processing = False
+enable_object_processing = True
 
 [octoprint_compat]
 
